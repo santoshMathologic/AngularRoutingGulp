@@ -90,6 +90,22 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                             })
                     }
                 }
+            }).state('home.dashboard.register',
+            {
+                templateUrl: 'ng/directives/dashboard/register/register.directive.html',
+                url: '/register',
+                resolve: {
+                    loadMyDirectives: function($ocLazyLoad) {
+                        return $ocLazyLoad.load(
+                            {
+                                name: 'smartApp',
+                                files: [
+                                    'ng/directives/dashboard/register/register.js'
+
+                                ]
+                            })
+                    }
+                }
             })
            
           
