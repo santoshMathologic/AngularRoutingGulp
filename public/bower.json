@@ -12,6 +12,8 @@
     "bootstrap": "^3.3.7",
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "AngularJS-Toaster": "toaster#^2.0.0"
+    "AngularJS-Toaster": "toaster#^2.0.0",
+    "angular-cookies": "^1.5.8",
+    "angular-ui-router": "^0.3.2"
   }
 }
