@@ -7,12 +7,13 @@ var app = angular.module('smartApp', [
     'ngCookies',
     'oc.lazyLoad',
   	'toaster',
-    'ui.router' 
+    'ngRoute',
+    'ui.router'
     ]);
 
 
-app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
-    function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
+app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
+    function($routeProvider,$stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
         
         $ocLazyLoadProvider.config({
             debug: false,
