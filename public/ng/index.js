@@ -52,6 +52,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 name: 'smartApp',
                                 files: [
                                     'ng/directives/dashboard/dashboard.js',
+                                    'ng/directives/dashboard/sidebar/sidebar.js',
                                
                                 ]
                             })
