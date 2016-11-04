@@ -1,0 +1,17 @@
+{
+  "name": "SmartWebSchool",
+  "authors": [
+    "Santosh"
+  ],
+  "description": "This Application mainly for School based Porject",
+  "main": "",
+  "license": "MIT",
+  "homepage": "www.smartschool.com",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "AngularJS-Toaster": "toaster#^2.0.0"
+  }
+}

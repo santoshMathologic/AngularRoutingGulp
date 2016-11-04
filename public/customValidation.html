@@ -1,0 +1,15 @@
+<div class="container">
+	<form name="myForm">
+		<div class="form-group">
+			<label for="search">Email:</label>
+			<input type="text" class="form-control" name="myInput" id="email" placeholder="Enter Text" ng-model="myInput" required my-directive>
+		</div>
+		
+	</form>
+
+    <p>The input's valid state is:</p>
+		<h1>{{myForm.myInput.$valid}}</h1>
+
+
+	<a class="btn btn-primary" href="#/home"> Back</a>
+</div>
