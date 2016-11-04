@@ -18,3 +18,14 @@ div#fixedfooter {
 	border:1px solid #CCC;
 	padding:8px;
 }
+
+#sidebar
+{
+    position:absolute;
+    right:1160px;
+    bottom:0px;
+    top:0px;
+    width:15%;
+	background-color:black;
+	float: left;
+}

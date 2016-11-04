@@ -1,5 +1,5 @@
 angular.module('smartApp')
-    .directive('sideBar', ['$compile', function($compile) {
+    .directive('sidebar', ['$compile', function($compile) {
         return {
             restrict: 'E',
             templateUrl: 'ng/directives/dashboard/sidebar/sidebar.tmpl.html',
