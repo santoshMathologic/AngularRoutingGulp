@@ -52,11 +52,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 name: 'smartApp',
                                 files: [
                                     'ng/directives/dashboard/dashboard.js',
-                                    //'ng/directives/dashboard/commonHeader/commonHeader.js',
-                                    //'ng/directives/dashboard/commonFooter/commonFooter.js',
-                                    //'ng/directives/dashboard/sidebar/sidebar.js',
-                                    //'ng/directives/dashboard/content/content.js'
-
+                               
                                 ]
                             })
                     }
@@ -71,6 +67,22 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                                 name: 'smartApp',
                                 files: [
                                     'ng/directives/auth/login/login.js'
+                                ]
+                            })
+                    }
+                }
+            }) .state('home.dashboard.users',
+            {
+                templateUrl: 'ng/directives/dashboard/user/user.directive.html',
+                url: '/users',
+                resolve: {
+                    loadMyDirectives: function($ocLazyLoad) {
+                        return $ocLazyLoad.load(
+                            {
+                                name: 'smartApp',
+                                files: [
+                                    'ng/directives/dashboard/user/user.js'
+
                                 ]
                             })
                     }
