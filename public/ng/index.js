@@ -44,7 +44,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
             })
             .state('home.dashboard',
             {
-                template: '<dashboard></dashboard>',
+                templateUrl: 'ng/directives/dashboard/dashboard.directive.html',
                 url: '/dashboard',
                 resolve: {
                     loadMyDirectives: function($ocLazyLoad) {
@@ -54,7 +54,8 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                                 files: [
                                     'ng/directives/dashboard/dashboard.js',
                                     'ng/directives/dashboard/sidebar/sidebar.js',
-                               
+                                    'ng/directives/dashboard/header/header.js',
+                                    'ng/directives/dashboard/footer/footer.js'
                                 ]
                             })
                     }
