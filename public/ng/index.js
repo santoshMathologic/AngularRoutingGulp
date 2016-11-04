@@ -71,10 +71,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                             })
                     }
                 }
-            }) .state('home.dashboard.users',
+            }).state('home.dashboard.user',
             {
                 templateUrl: 'ng/directives/dashboard/user/user.directive.html',
-                url: '/users',
+                url: '/user',
                 resolve: {
                     loadMyDirectives: function($ocLazyLoad) {
                         return $ocLazyLoad.load(
