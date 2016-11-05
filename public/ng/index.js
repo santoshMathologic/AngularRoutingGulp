@@ -40,7 +40,8 @@ app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider', '$ocLazyLo
                             {
                                 name: 'smartApp',
                                 files: [
-                                    'ng/directives/home/home.js'
+                                    'ng/directives/home/home.js',
+                                    
                                 ]
                             })
                     }
@@ -59,7 +60,9 @@ app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider', '$ocLazyLo
                                     'ng/directives/dashboard/dashboard.js',
                                     'ng/directives/dashboard/sidebar/sidebar.js',
                                     'ng/directives/dashboard/header/header.js',
-                                    'ng/directives/dashboard/footer/footer.js'
+                                    'ng/directives/dashboard/footer/footer.js',
+                                    'ng/directives/state/state.js'
+                                    
                                 ]
                             })
                     }
