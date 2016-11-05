@@ -1,12 +1,11 @@
-div#fixedheader {
+.fixedheader {
 	position:fixed;
 	top:0px;
 	left:0px;
 	width:100%;
-	color:#CCC;
-	background:#333;
-	border:1px solid #CCC;
-	padding:20px;
+	color:#ffffff;
+	background: maroon;
+	padding:5px;
 }
 div#fixedfooter {
 	position:fixed;
