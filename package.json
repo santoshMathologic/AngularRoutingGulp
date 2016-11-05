@@ -28,6 +28,12 @@
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
-    "gulp-util": "^3.0.7"
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-multinject": "^0.1.0",
+    "gulp-util": "^3.0.7",
+    "merge-stream": "^1.0.0",
+    "run-sequence": "^1.2.2"
   }
 }
