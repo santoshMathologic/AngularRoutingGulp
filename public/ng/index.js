@@ -6,24 +6,28 @@ var $http = initInjector.get('$http');
 var app = angular.module('smartApp', [
     'ngCookies',
     'oc.lazyLoad',
-  	'toaster',
+    'toaster',
     'ngRoute',
     'ui.router'
-    ]);
+]);
 
 
-app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
-    function($routeProvider,$stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
-        
+app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider',
+    function ($routeProvider, $stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider) {
+
         $ocLazyLoadProvider.config({
             debug: false,
             events: true,
         });
 
-       
 
 
-       // $httpProvider.defaults.withCredentials = true;
+
+        $httpProvider.defaults.withCredentials = true;
+
+
+
+
 
         $urlRouterProvider.otherwise('/home/dashboard');
         $stateProvider
@@ -31,7 +35,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                 templateUrl: 'ng/directives/home/home.directive.html',
                 url: '/home',
                 resolve: {
-                    loadMyDirectives: function($ocLazyLoad) {
+                    loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load(
                             {
                                 name: 'smartApp',
@@ -47,7 +51,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                 templateUrl: 'ng/directives/dashboard/dashboard.directive.html',
                 url: '/dashboard',
                 resolve: {
-                    loadMyDirectives: function($ocLazyLoad) {
+                    loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load(
                             {
                                 name: 'smartApp',
@@ -64,7 +68,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                 templateUrl: 'ng/directives/auth/login/login.directive.html',
                 url: '/login',
                 resolve: {
-                    loadMyDirectives: function($ocLazyLoad) {
+                    loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load(
                             {
                                 name: 'smartApp',
@@ -79,7 +83,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                 templateUrl: 'ng/directives/dashboard/user/user.directive.html',
                 url: '/user',
                 resolve: {
-                    loadMyDirectives: function($ocLazyLoad) {
+                    loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load(
                             {
                                 name: 'smartApp',
@@ -95,7 +99,7 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                 templateUrl: 'ng/directives/dashboard/register/register.directive.html',
                 url: '/register',
                 resolve: {
-                    loadMyDirectives: function($ocLazyLoad) {
+                    loadMyDirectives: function ($ocLazyLoad) {
                         return $ocLazyLoad.load(
                             {
                                 name: 'smartApp',
@@ -107,6 +111,20 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoa
                     }
                 }
             })
-           
-          
+
+        $routeProvider
+            .when('/red', {
+                templateUrl: 'red.html',
+
+
+            }).when('/green', {
+                templateUrl: 'green.html',
+
+
+            }).when('/blue', {
+                templateUrl: 'blue.html',
+
+            })
+
+
     }]);

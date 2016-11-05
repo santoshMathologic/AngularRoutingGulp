@@ -13,7 +13,7 @@ angular.module('smartApp')
 
                 $scope.doLogin = function () {
 
-                    $state.go('home.dashboard.user');
+                    $state.go('home.dashboard');
 
 
                 }
