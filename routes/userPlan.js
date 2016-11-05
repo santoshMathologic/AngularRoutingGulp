@@ -20,7 +20,7 @@ planObject.getPlan = function (req, res) {
     };
 
     var query = planModel.find({
-        $or: [{
+       /* $or: [{
             "planName": { '$regex': options.planName, $options: 'i' },
             "owner": { '$regex': options.owner, $options: 'i' },
             "reviewer": { '$regex': options.reviewer, $options: 'i' },
@@ -28,6 +28,8 @@ planObject.getPlan = function (req, res) {
              
              //"coPlanners":{"cname":'$elemMatch' : options.coplanner}
         }]
+        */
+        
     }).sort(options.sortBy);
     query.paginate(options, function (err, result) {
         if (err) throw new Error("Error in Accessing userPlan" + err);
