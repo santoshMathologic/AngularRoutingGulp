@@ -5,7 +5,7 @@
     font-weight: 200;
     background-color: maroon;
     position: fixed;
-    top: 10px;
+    top: 50px;
     left: 0px;
     width: 250px;
     height: 100%;
@@ -128,3 +128,13 @@
   }
 }
 
+.circle{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:20px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:#000
+}
