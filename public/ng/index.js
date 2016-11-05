@@ -97,6 +97,23 @@ app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider', '$ocLazyLo
                             })
                     }
                 }
+            })
+            .state('home.dashboard.userPlan',
+            {
+                templateUrl: 'ng/directives/dashboard/userPlan/userPlan.directive.html',
+                url: '/userPlan',
+                resolve: {
+                    loadMyDirectives: function ($ocLazyLoad) {
+                        return $ocLazyLoad.load(
+                            {
+                                name: 'smartApp',
+                                files: [
+                                    'ng/directives/dashboard/userPlan/userPlan.js'
+
+                                ]
+                            })
+                    }
+                }
             }).state('home.dashboard.register',
             {
                 templateUrl: 'ng/directives/dashboard/register/register.directive.html',
