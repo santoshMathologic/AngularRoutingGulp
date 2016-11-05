@@ -17,7 +17,7 @@ angular.module('smartApp')
         'comments': '@',
         'number': '@',
         'name': '@',
-        'colour': '@',
+        'panelcolour': '@',
         'details':'@',
         'type':'@',
         'goto':'@'
