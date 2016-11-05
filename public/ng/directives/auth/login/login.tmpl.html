@@ -1,29 +1,30 @@
-<style>
-
-* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
-
-html { width: 100%; height:100%; overflow:hidden; }
-body { 
-    
-	width: 100%;
-	height:100%;
-	font-family: 'Open Sans', sans-serif;
-	background: #092756;
-	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
-	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
-}
-</style>
-
-
-<div class="login">
-	<h1>Login</h1>
-    <form method="post">
-    	<input type="text" name="u" placeholder="Username"  ng-model="userObject.username" />
-        <input type="password" name="p" placeholder="Password"  ng-model="userObject.password" />
-        <button type="submit" class="btn btn-primary btn-block btn-large" ng-click="doLogin()">Let me in.</button>
-    </form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<div class="login-panel panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Please Sign In</h3>
+				</div>
+				<div class="panel-body">
+					<form role="form">
+						<fieldset>
+							<div class="form-group">
+								<input class="form-control" placeholder="user" name="email" type="text" autofocus ng-model="userObject.username">
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Password" name="password" type="password" ng-model="userObject.password">
+							</div>
+							<div class="checkbox">
+								<label>
+                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                </label>
+							</div>
+							<!-- Change this to a button or input when using this as a form -->
+							<a ui-sref="home.dashboard" class="btn btn-lg btn-primary btn-block">Login</a>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
